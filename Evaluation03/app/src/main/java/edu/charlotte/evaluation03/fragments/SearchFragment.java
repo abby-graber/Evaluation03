@@ -47,6 +47,9 @@ public class SearchFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         getActivity().setTitle("Search");
+        if (selectedCategory != null) {
+            binding.textViewCategory.setText(selectedCategory.strCategory);
+        }
 
         binding.buttonClear.setOnClickListener(new View.OnClickListener() {
             @Override
